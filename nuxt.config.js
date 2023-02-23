@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-demo',
+    title: 'Lorblog',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,13 +18,14 @@ export default {
 
   server: {
     port: 4356,
-    host: '192.168.3.8',
+    host: '127.0.0.1',
     timing: false
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/normalize.css'
+    '@/assets/css/normalize.css',
+    '@/assets/css/common.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -36,6 +37,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

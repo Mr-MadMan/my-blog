@@ -1,34 +1,65 @@
 <template>
-  <div class="layout">
-    <header class="header">头部</header>
-    <nuxt />
-    <footer>底部</footer>
+  <div class="base-layout">
+    <header>
+      <!-- logo位 -->
+      <span>Lorclub</span>
+      <div class="header-right">
+        <nuxt-link to="/about">关于</nuxt-link>
+        <nuxt-link to="/">我的</nuxt-link>
+      </div>
+    </header>
+    <main>
+      <nuxt />
+    </main>
+    <footer>
+      <p>
+        © {{ year }} Lorclub.
+        All Rights Reserved. | Thanks all the people who supported me at the darkness.
+      </p>
+    </footer>
   </div>
 </template>
 
 <script>
-  export default {
-    name: '',
-    components:{},
-    props:{},
-    data(){
-      return {
-
-      }
-    },
-    created(){},
-    methods:{}
-  }
+export default {
+  name: 'BaseLayout',
+  components: {},
+  data() {
+    return {
+      year: new Date().getFullYear()
+    }
+  },
+  created() {},
+  methods: {}
+}
 </script>
+
 <style scoped lang="scss">
-  .header {
-    padding: 20px 0;
-    background-color: blueviolet;
+  .base-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(40, 42, 44, 0.6);
     color: #fff;
+    font-size: 14px;
+  }
+
+  main {
+    flex: 1;
+    background-color: #eee;
   }
 
   footer {
-    background-color: rgb(27, 27, 27);
+    padding: 30px 0;
+    background-color: #363b3f;
+    font-size: 12px;
     color: #fff;
+    text-align: center;
   }
 </style>
