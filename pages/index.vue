@@ -1,13 +1,14 @@
 <template>
   <div class="container">
-    <div class="blog-content">
+    <!-- <div class="blog-content lg:grid md:flex flex-col"> -->
+    <div class="blog-content grid">
       <div class="left">
         <template v-for="(item, idx) in acList">
           <post-item :key="`post-item_${idx}`" :ac-data="item" />
         </template>
       </div>
       <div class="right">
-        <strong>文章分类</strong>
+        <strong class="text-gray-600">文章分类</strong>
         <ul class="category">
           <li class="category-item">css</li>
           <li class="category-item">vue</li>
@@ -58,7 +59,7 @@ export default {
   }
 
   .blog-content {
-    display: grid;
+    // display: grid;
     grid-template-columns: 70% 1fr;
     column-gap: 40px;
   }

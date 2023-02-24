@@ -1,4 +1,5 @@
 <template>
+  <!-- <div class="post-item md:w-8/12 lg:w-auto"> -->
   <div class="post-item">
     <div class="post-item-top" @click="handleGotoDetail">
       <img class="cover" src="https://picsum.photos/400/300" alt="cover" />

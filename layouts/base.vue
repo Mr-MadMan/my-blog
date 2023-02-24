@@ -1,22 +1,23 @@
 <template>
-  <div class="base-layout">
+  <div class="base-layout dark:bg-black">
     <header>
       <!-- logo slot -->
-      <span>Lorclub</span>
+      <span class="text-gray-700">Lorclub</span>
       <div class="header-right">
         <nuxt-link to="/about">关于</nuxt-link>
-        <nuxt-link to="/">我的</nuxt-link>
+        <nuxt-link to="/">
+          <i class="fa-solid fa-map" /> 我的
+        </nuxt-link>
       </div>
     </header>
-    <main>
+    <main class="bg-gray-300">
       <nuxt />
     </main>
     <footer>
       <p>
         © {{ year }} Lorclub.
         All Rights Reserved. | Thanks all the people who supported me at the darkness.
-      </p>
-      contact me => email mr_savage21@163.com
+      </p>contact me => email mr_savage21@163.com
     </footer>
   </div>
 </template>
@@ -45,7 +46,7 @@ export default {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 30px;
     background-color: rgba(40, 42, 44, 0.6);
     color: #fff;
     font-size: 14px;
@@ -53,7 +54,7 @@ export default {
 
   main {
     // flex: 1;
-    background-color: #eee;
+    // background-color: #eee;
     min-height: 600px;
   }
 

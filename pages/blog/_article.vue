@@ -17,7 +17,6 @@
           <li>15</li>
           <li>23</li>
         </ol>
-
       </div>
     </article>
   </div>
@@ -78,7 +77,8 @@ export default {
   }
 
   .author-info {
-    margin-bottom: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
     color: #8a919f;
   }
 
